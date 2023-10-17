@@ -1,0 +1,8 @@
+BootStrap: docker
+From: mambaorg/micromamba:1.5.1-jammy-cuda-11.8.0
+
+%files
+    mamba_llama2_2.yml mamba_llama2_2.yml
+
+%post
+    micromamba install -qy -n base -f mamba_llama2_2.yml
